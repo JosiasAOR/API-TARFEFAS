@@ -15,7 +15,7 @@ console.log("aquiiii",novoStatus)
             if (resultado.rowCount === 0) {
                 res.status(404).send({ erro: 'Tarefa não encontrada.' });
             } else {
-                res.status(200).send({ mensagem: 'Status da tarefa atualizado com sucesso.' });
+                res.status(200).send({ mensagem: 'Status da tarefa atualizaaado com sucesso.' });
             }
         })
         .catch(erro => {
