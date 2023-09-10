@@ -7,6 +7,7 @@ const controller4 = require('../controllers/atualizarTarefas')
 const controller5 = require('../controllers/mudarStatus')
 
 router.get('/tarefas/:id', controller.exibirTarefasParcial)
+router.get('/tarefa/:id', controller.exibirTarefaPeloId)
 router.get('/tarefas/', controller.exibirTarefas)
 router.post('/adicionar-tarefa', controller2.cadastroTarefas)
 router.delete('/deletar/:id', controller3.deletarTarefa)

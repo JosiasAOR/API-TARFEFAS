@@ -27,3 +27,16 @@ database.query(`SELECT * FROM tarefas WHERE titulo LIKE '%${parcial}%' ;`).then(
 
 )
 }
+exports.exibirTarefaPeloId=(req, res) => {
+   const id = req.params.id
+database.query(`SELECT * FROM tarefas WHERE id = ${id};`).then(
+
+(resultado)=>{
+    res.status(200).send({tarefas: resultado.rows});
+}, (erro)=>{
+    res.status(500).send({erro: erro})
+}
+
+
+)
+}
